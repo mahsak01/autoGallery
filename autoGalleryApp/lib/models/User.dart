@@ -1,4 +1,6 @@
 // models of user
+import 'dart:io';
+
 class User{
 
   //id of user
@@ -18,6 +20,9 @@ class User{
 
   //passsword of user
   String _password;
+
+  //image of profile
+  File _profile;
 
   /*
     ************************** constructor **************************
@@ -39,6 +44,7 @@ class User{
 
   String get name => _name;
 
+  File get profile => _profile;
 
   /*
     ************************** setter **************************
@@ -63,6 +69,7 @@ class User{
     _name = value;
   }
 
-
-
+  set profile(File value) {
+    _profile = value;
+  }
 }
