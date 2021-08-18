@@ -26,7 +26,7 @@ class HomeWidgets extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               FadeAnimation(
-                3, Padding(
+                1.5, Padding(
                   padding: const EdgeInsets.only(right: 20, top: 20),
                   child: Text("برند ها",
                       textAlign: TextAlign.right,
@@ -37,7 +37,7 @@ class HomeWidgets extends StatelessWidget {
                 ),
               ),
               FadeAnimation(
-                3.5, SizedBox(
+                2, SizedBox(
                   height: 13.h,
                   child: NotificationListener<OverscrollIndicatorNotification>(
                       onNotification: (overscroll) {
@@ -53,7 +53,7 @@ class HomeWidgets extends StatelessWidget {
                 ),
               ),
               FadeAnimation(
-                4, Padding(
+                2.5, Padding(
                   padding: const EdgeInsets.only(
                       right: 20, top: 20, left: 40, bottom: 20),
                   child: Row(
@@ -137,7 +137,7 @@ class HomeWidgets extends StatelessWidget {
                     shrinkWrap: true,
                     children: List.generate(cars.length, (index) {
                       return FadeAnimation(
-                          4+(0.5*index), CardCar(cars[index]));
+                          3+(0.5*index), CardCar(cars[index]));
                     }).toList()
                 )
             ),
