@@ -1,17 +1,32 @@
 import 'package:flutter/cupertino.dart';
 
+import 'Car.dart';
+import 'PubilcValue.dart';
+
+/*
+************************** ProviderChange **************************
+ */
 class ProviderChange with ChangeNotifier {
 
+  /*
+    ************************** password **************************
+   */
   bool _passwordInSignIn=false;
-  int _selectedIndex = 4;
-
 
   bool get passwordInSignIn => _passwordInSignIn;
 
   void setPasswordInSignIn() {
     _passwordInSignIn=!_passwordInSignIn;
-     notifyListeners();
+    notifyListeners();
   }
+
+
+  /*
+   ************************** BottomNavigationBar **************************
+   */
+  int _selectedIndex = 4;
+
+
 
   int get selectedIndex => _selectedIndex;
 

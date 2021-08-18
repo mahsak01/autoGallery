@@ -1,4 +1,5 @@
 
+import 'package:autogallery/screens/home.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 class Button extends StatelessWidget {
@@ -18,10 +19,10 @@ class Button extends StatelessWidget {
             child: TextButton(
               onPressed: () {
                 Navigator.pop(context);
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) => HomePage(4)),
-                // );
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomePage()),
+                );
               },
               style: TextButton.styleFrom(
                 primary: Theme.of(context).primaryColor,

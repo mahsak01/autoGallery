@@ -1,6 +1,7 @@
 import 'package:autogallery/models/ProviderChange.dart';
 import 'package:autogallery/models/PubilcValue.dart';
 import 'package:autogallery/presentations/my_flutter_app_icons.dart';
+import 'package:autogallery/screens/search.dart';
 import 'package:autogallery/widgets/drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/src/provider.dart';
@@ -72,10 +73,10 @@ class HomePage extends StatelessWidget {
               color: Theme.of(context).primaryColor,
             ),
             onPressed: (){
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(builder: (context) => Search()),
-              // );
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Search()),
+              );
             },
           ),
         ),
