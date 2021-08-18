@@ -1,3 +1,4 @@
+import 'package:custom_fade_animation/custom_fade_animation.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 /*
@@ -16,14 +17,15 @@ class NoResult extends StatelessWidget {
           /*
           ************************** text of no result **************************
            */
-          Padding(
-            padding: const EdgeInsets.all(25),
-            child: Directionality(
-              textDirection: TextDirection.rtl,
-              child: Text("نتیجه یافت نشد",
-                style: TextStyle(
-                  color: Theme.of(context).primaryColor, fontSize: 8.w, ),),
+          FadeAnimation(2, Padding(
+              padding: const EdgeInsets.all(25),
+              child: Directionality(
+                textDirection: TextDirection.rtl,
+                child: Text("نتیجه یافت نشد",
+                  style: TextStyle(
+                    color: Theme.of(context).primaryColor, fontSize: 8.w, ),),
 
+              ),
             ),
           ),
 
@@ -31,14 +33,15 @@ class NoResult extends StatelessWidget {
           /*
           ************************** image of no result **************************
            */
-          Center(
-            child: Container(
-              width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height/2.5,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage("assets/images/emptyresult.png"),
-                  fit: BoxFit.fitWidth,
+          FadeAnimation(2.5, Center(
+              child: Container(
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height/2.5,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage("assets/images/emptyresult.png"),
+                    fit: BoxFit.fitWidth,
+                  ),
                 ),
               ),
             ),

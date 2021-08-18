@@ -1,4 +1,5 @@
 import 'package:autogallery/models/PubilcValue.dart';
+import 'package:autogallery/screens/allcar_page.dart';
 import 'package:autogallery/widgets/BrandWidgets.dart';
 import 'package:autogallery/widgets/card_car.dart';
 import 'package:custom_fade_animation/custom_fade_animation.dart';
@@ -60,10 +61,10 @@ class HomeWidgets extends StatelessWidget {
                     children: [
                       GestureDetector(
                         onTap: () {
-                          // Navigator.push(
-                          //   context,
-                          //   MaterialPageRoute(builder: (context) => AllCarPage()),
-                          // );
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => AllCarPage()),
+                          );
                         },
                         child: Container(
                           height: MediaQuery.of(context).size.height / 21,
