@@ -1,4 +1,5 @@
 import 'package:autogallery/models/Car.dart';
+import 'package:autogallery/models/PubilcValue.dart';
 import 'package:autogallery/presentations/my_flutter_app_icons.dart';
 import 'package:favorite_button/favorite_button.dart';
 import 'package:flutter/material.dart';
@@ -6,8 +7,7 @@ import 'package:flutter/material.dart';
 /*
   ************************** card of ads car **************************
  */
-class CardCar extends StatelessWidget {
-
+class CardCar extends StatefulWidget {
   //car object
   Car car;
 
@@ -15,6 +15,18 @@ class CardCar extends StatelessWidget {
     ************************** constructor **************************
    */
   CardCar(this.car);
+  @override
+  _CardCarState createState() => _CardCarState(car);
+}
+
+class _CardCarState extends State<CardCar> {
+  //car object
+  Car car;
+
+  /*
+    ************************** constructor **************************
+   */
+  _CardCarState(this.car);
 
   @override
   Widget build(BuildContext context) {
@@ -62,7 +74,16 @@ class CardCar extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.all(5),
                       child: FavoriteButton(
-                        valueChanged: (_) {},
+                        isFavorite: car.Favorite,
+                        valueChanged: (_) {
+                          setState(() {
+                            car.Favorite=!car.Favorite;
+                            if(car.Favorite==true)
+                              likes.add(car);
+                            else
+                              likes.remove(car);
+                          });
+                        },
                         iconSize: 50,
                       ),
                     ),

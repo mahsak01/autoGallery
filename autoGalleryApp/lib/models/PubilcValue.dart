@@ -46,6 +46,6 @@ List <Car> cars=[
   Car(3,"تیبا صندق دار",["assets/images/post/1_1.jpg","assets/images/post/1_2.jpg","assets/images/post/1_3.jpg"],"0xFF404040","90","98"),
   Car(4,"تیبا صندق دار",["assets/images/post/1_1.jpg","assets/images/post/1_2.jpg","assets/images/post/1_3.jpg"],"0xFF404040","90","98"),
   Car(5,"تیبا صندق دار",["assets/images/post/1_1.jpg","assets/images/post/1_2.jpg","assets/images/post/1_3.jpg"],"0xFF404040","90","98"),
-
-
 ];
+
+List<Car>likes=[];

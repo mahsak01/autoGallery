@@ -20,6 +20,9 @@ class Car{
   //kilometr of car
   String _km;
 
+  //is Favorite
+  bool Favorite=false;
+
 
   /*
     ************************** constructor **************************
