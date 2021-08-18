@@ -1,0 +1,54 @@
+html {
+  direction: rtl;
+}
+
+body {
+  margin: 0;
+}
+
+.nav {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  border: 1px solid black;
+}
+
+img {
+  width: 40px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  /* width: 100%; */
+  color: white;
+  background-color: black;
+  margin: 0;
+  position: relative;
+}
+
+#sideNav {
+  transition: right 0.6s;
+}
+
+.spacing {
+  height: 100px;
+}
+
+.wrap {
+  padding: 10px;
+  width: 40vw;
+  background-color: lightsalmon;
+  white-space: nowrap;
+}
+
+.filter-transition {
+  width: 30vw;
+  transition: filter 0.5s linear;
+}
+
+.filter-transition:hover {
+  filter: blur(10px);
+}

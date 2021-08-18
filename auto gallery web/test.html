@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Styles/test.css" />
+    <title>Document</title>
+    <style>
+      h1 {
+        font-family: "Open Sans", "Helvetica Neue", sans-serif;
+        font-weight: 500;
+        font-size: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <h1>ehem, dar daste sakht...</h1>
+      <div id="menuBtn">
+        <img src="icons/left-arrow.svg" alt="" />
+      </div>
+      <ul id="sideNav">
+        <li>links</li>
+        <li>contact us</li>
+        <li>pricing</li>
+        <li>Q&A</li>
+      </ul>
+    </div>
+    <div class="spacing"></div>
+
+    <div class="wrap">
+      <p>
+        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
+        از طراحان گرافیک است. چاپگرها و متون بلکه
+        mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmروزنامه و مجله در ستون و تن
+        ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
+        است. چاپگرها و متون بلک سطرآنچنان که لازم است و برای شرایط
+      </p>
+    </div>
+
+    <picture>
+      <source media="(min-width: 500px)" srcset="Images/car-gallery.jpg" />
+      <img src="Images/picture.jpg" alt="something" />
+    </picture>
+
+    <a href="index.html">
+      <img style="width: 40px" src="icons/heart-filled.svg" alt="" />
+    </a>
+    <div>
+      <img class="filter-transition" src="images/background.svg" alt="" />
+    </div>
+
+    <script>
+      var menuBtn = document.getElementById("menuBtn");
+      var sideNav = document.getElementById("sideNav");
+      // var menu = document.getElementById("menu");
+      sideNav.style.right = "0px";
+      menuBtn.onclick = function () {
+        if (sideNav.style.right == "0px") {
+          sideNav.style.right = "-100px";
+          // menu.src = "../img/icon/close.png";
+        } else {
+          sideNav.style.right = "0px";
+          // menu.src = "../img/icon/menu.png";
+        }
+      };
+    </script>
+  </body>
+</html>
