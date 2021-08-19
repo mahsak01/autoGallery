@@ -47,7 +47,7 @@ class EditProfileState extends State<EditProfile> {
     return Scaffold(
       body: Container(
         width: MediaQuery.of(context).size.width,
-        color: Colors.white,
+        color: Theme.of(context).backgroundColor,
         child:  NotificationListener<OverscrollIndicatorNotification>(
           onNotification: (overscroll) {
             overscroll.disallowGlow();
@@ -71,17 +71,17 @@ class EditProfileState extends State<EditProfile> {
                               clipper: OvalBottomBorderClipper(),
                               child: Container(
                                 height: MediaQuery.of(context).size.height / 4.5,
-                               color:  Color(0xFFFDAB1C),
+                               color:  Theme.of(context).accentColor,
                               )),
                           Stack(
                             alignment: Alignment.bottomLeft,
                             children: [
                               CircleAvatar(
                                 radius:  MediaQuery.of(context).size.width / 7,
-                                backgroundColor: Colors.grey,
+                                backgroundColor: Theme.of(context).splashColor,
                                 child: image==null ? Icon(
                                   Icons.person,
-                                  color: Colors.black,
+                                  color: Theme.of(context).primaryColor,
                                   size: MediaQuery.of(context).size.width / 7,
                                 ): ClipOval(
                                     child: Image.file(image,
@@ -98,11 +98,11 @@ class EditProfileState extends State<EditProfile> {
                                 },
                                 child: CircleAvatar(
                                   radius: MediaQuery.of(context).size.width/21,
-                                  backgroundColor: Colors.black,
+                                  backgroundColor: Theme.of(context).primaryColor,
                                   child: Center(
                                     child: Icon(
                                       MyFlutterApp.add_a_photo,
-                                      color: Colors.white,
+                                      color: Theme.of(context).backgroundColor,
                                       size:  MediaQuery.of(context).size.width / 21,
                                     ),
                                   ),
@@ -115,7 +115,7 @@ class EditProfileState extends State<EditProfile> {
                       Text(
                         "ویرایش پروفایل",
                         style:TextStyle(
-                            color: Colors.black,
+                            color: Theme.of(context).primaryColor,
                             fontSize: 7.w,
                         ),
                       ),
@@ -131,7 +131,7 @@ class EditProfileState extends State<EditProfile> {
                     },
                     icon: Icon(
                       Icons.arrow_back_ios,
-                      color: Colors.black,
+                      color: Theme.of(context).primaryColor,
                       size: 10.w,
                     ),
                   ),
@@ -191,8 +191,8 @@ class EditProfileState extends State<EditProfile> {
                       Navigator.pop(context);
                     },
                     style: TextButton.styleFrom(
-                      primary: Colors.black,
-                      backgroundColor: Color(0xFFFDAB1C),
+                      primary: Theme.of(context).primaryColor,
+                      backgroundColor: Theme.of(context).accentColor,
                       animationDuration: Duration(milliseconds: 700),
                       shape:  const RoundedRectangleBorder(
                         borderRadius: BorderRadius.only(topLeft:Radius.circular(40),bottomRight:Radius.circular(40),bottomLeft:Radius.circular(40)),
@@ -207,7 +207,7 @@ class EditProfileState extends State<EditProfile> {
                           "ثبت تغییرات",
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                              color: Colors.white,
+                              color: Theme.of(context).backgroundColor,
                               fontSize: 7.w,
                           ),
                         ),
@@ -234,18 +234,18 @@ class EditProfileState extends State<EditProfile> {
     await showDialog(
 
       builder: (context) => SimpleDialog(
-        backgroundColor: Colors.black,
-        title: Text('Select photo',style: TextStyle(color: Color(0xFFFDAB1C)),),
+        backgroundColor: Theme.of(context).primaryColor,
+        title: Text('Select photo',style: TextStyle(color: Theme.of(context).accentColor),),
         children: <Widget>[
           SimpleDialogOption(
-            child: Text('From gallery',style: TextStyle(color: Colors.white)),
+            child: Text('From gallery',style: TextStyle(color: Theme.of(context).backgroundColor)),
             onPressed: () {
               selectOrTakePhoto(ImageSource.gallery);
               Navigator.pop(context);
             },
           ),
           SimpleDialogOption(
-            child: Text('Take a photo',style: TextStyle(color: Colors.white),),
+            child: Text('Take a photo',style: TextStyle(color: Theme.of(context).backgroundColor),),
             onPressed: () {
               selectOrTakePhoto(ImageSource.camera);
               Navigator.pop(context);
@@ -282,8 +282,8 @@ class EditProfileState extends State<EditProfile> {
         ],
         androidUiSettings: AndroidUiSettings(
             toolbarTitle: 'Cropper',
-            toolbarColor: Color(0xFFFDAB1C),
-            toolbarWidgetColor: Colors.white,
+            toolbarColor: Theme.of(context).accentColor,
+            toolbarWidgetColor: Theme.of(context).backgroundColor,
             initAspectRatio: CropAspectRatioPreset.original,
             lockAspectRatio: false),
         iosUiSettings: IOSUiSettings(
