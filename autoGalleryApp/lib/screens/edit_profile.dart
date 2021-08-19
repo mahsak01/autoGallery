@@ -5,6 +5,7 @@ import 'package:autogallery/presentations/my_flutter_app_icons.dart';
 import 'package:autogallery/screens/home.dart';
 import 'package:autogallery/widgets/TextFiled.dart';
 import 'package:autogallery/widgets/passwordTextFiled.dart';
+import 'package:custom_fade_animation/custom_fade_animation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:image_cropper/image_cropper.dart';
@@ -33,7 +34,7 @@ class EditProfileState extends State<EditProfile> {
   Widget build(BuildContext context) {
 
     /*
-     ************************** Edit profile page **************************
+     ************************** set value **************************
     */
     image=context.watch<ProviderChange>().users.profile;
     controllers[0].text=context.watch<ProviderChange>().users.name;
@@ -54,6 +55,9 @@ class EditProfileState extends State<EditProfile> {
           child: ListView(
             scrollDirection: Axis.vertical,
             children: [
+              /*
+                 ************************** set top background **************************
+                */
               Stack(
                 alignment: Alignment.topLeft,
                 children: [
@@ -135,53 +139,77 @@ class EditProfileState extends State<EditProfile> {
               ),
               SizedBox(height: 2.h,),
 
-              TextFiled(Icons.person, 'نام', controllers[0]),
-              SizedBox(height: 2.h,),
 
-              TextFiled(Icons.family_restroom, 'نام خانوادگی', controllers[1]),
-              SizedBox(height: 2.h,),
-
-              TextFiled(Icons.person_pin_outlined, 'نام کاربری', controllers[2]),
-              SizedBox(height: 2.h,),
-
-              TextFiled(Icons.email_outlined, 'ایمیل', controllers[3]),
-              SizedBox(height: 2.h,),
-
-              TextFiled( MyFlutterApp.phone, 'شماره تماس', controllers[4]),
-              SizedBox(height: 2.h,),
-
-              TextFiled(Icons.flag, 'کد ملی', controllers[5]),
-              SizedBox(height: 2.h,),
-
-              PasswordTextFiled(controllers[6]),
               /*
+                ************************** TextField **************************
+             */
+              FadeAnimation(
+                  0.5, TextFiled(Icons.person, 'نام', controllers[0])),
+              SizedBox(height: 2.h,),
 
-               */
-              Padding(
-                padding: const EdgeInsets.only(top:50,bottom: 20,right: 50,left: 50),
-                child: TextButton(
-                  onPressed: (){
-                    Navigator.pop(context);
-                  },
-                  style: TextButton.styleFrom(
-                    primary: Colors.black,
-                    backgroundColor: Color(0xFFFDAB1C),
-                    animationDuration: Duration(milliseconds: 700),
-                    shape:  const RoundedRectangleBorder(
-                      borderRadius: BorderRadius.only(topLeft:Radius.circular(40),bottomRight:Radius.circular(40),bottomLeft:Radius.circular(40)),
+              FadeAnimation(
+                  1,
+                  TextFiled(Icons.family_restroom, 'نام خانوادگی', controllers[1])),
+              SizedBox(height: 2.h,),
+
+              FadeAnimation(
+                  1.5,
+                  TextFiled(Icons.person_pin_outlined, 'نام کاربری', controllers[2])),
+              SizedBox(height: 2.h,),
+
+              FadeAnimation(
+                  2,
+                  TextFiled(Icons.email_outlined, 'ایمیل', controllers[3])),
+              SizedBox(height: 2.h,),
+
+              FadeAnimation(
+                  2.5,
+                  TextFiled( MyFlutterApp.phone, 'شماره تماس', controllers[4])),
+              SizedBox(height: 2.h,),
+
+              FadeAnimation(
+                  3,
+                  TextFiled(Icons.flag, 'کد ملی', controllers[5])),
+              SizedBox(height: 2.h,),
+
+              FadeAnimation(
+                  3.5,
+                  PasswordTextFiled(controllers[6])),
+
+
+
+
+              /*
+                 ************************** Button **************************
+                 */
+              FadeAnimation(
+                4,
+                Padding(
+                  padding: const EdgeInsets.only(top:50,bottom: 20,right: 50,left: 50),
+                  child: TextButton(
+                    onPressed: (){
+                      Navigator.pop(context);
+                    },
+                    style: TextButton.styleFrom(
+                      primary: Colors.black,
+                      backgroundColor: Color(0xFFFDAB1C),
+                      animationDuration: Duration(milliseconds: 700),
+                      shape:  const RoundedRectangleBorder(
+                        borderRadius: BorderRadius.only(topLeft:Radius.circular(40),bottomRight:Radius.circular(40),bottomLeft:Radius.circular(40)),
+                      ),
+
                     ),
-
-                  ),
-                  child: SizedBox(
-                    width: MediaQuery.of(context).size.width/2,
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        "ثبت تغییرات",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 7.w,
+                    child: SizedBox(
+                      width: MediaQuery.of(context).size.width/2,
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          "ثبت تغییرات",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 7.w,
+                          ),
                         ),
                       ),
                     ),
@@ -197,6 +225,11 @@ class EditProfileState extends State<EditProfile> {
     );
   }
 
+
+
+/*
+  ************************** image picker **************************
+ */
   Future  _showSelectionDialog()async {
     await showDialog(
 
