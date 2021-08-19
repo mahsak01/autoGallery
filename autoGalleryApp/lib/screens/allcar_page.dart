@@ -5,6 +5,8 @@ import 'package:custom_fade_animation/custom_fade_animation.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
+import 'filter.dart';
+
 
 /*
   ************************** show all ads car **************************
@@ -44,10 +46,10 @@ class _AllCarPageState extends State<AllCarPage> {
         actions: [
           IconButton(
               onPressed: (){
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) => FilterPage()),
-                // );
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => FilterPage()),
+                );
               },
               icon: Icon(
                 MyFlutterApp.sliders,

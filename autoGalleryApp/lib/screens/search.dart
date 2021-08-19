@@ -9,6 +9,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/src/provider.dart';
 import 'package:sizer/sizer.dart';
 
+import 'filter.dart';
+
 
 /*
   ************************** search page **************************
@@ -149,10 +151,10 @@ class _SearchState extends State<Search> {
                               size: 7.w,
                             ),
                             onPressed: (){
-                              // Navigator.push(
-                              //   context,
-                              //   MaterialPageRoute(builder: (context) => FilterPage()),
-                              // );
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => FilterPage()),
+                              );
                             },
                           ),
                         )
