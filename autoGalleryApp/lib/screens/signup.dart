@@ -19,6 +19,10 @@ class SignUp extends StatefulWidget {
 class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
+
+    //controllers
+    List<TextEditingController> controllers = [TextEditingController(),TextEditingController(),TextEditingController(),TextEditingController(),TextEditingController()];
+
     return Scaffold(
       body: Container(
         color: Theme.of(context).backgroundColor,
@@ -114,23 +118,23 @@ class _SignUpState extends State<SignUp> {
                */
                */
               FadeAnimation(
-                  2.5, TextFiled(Icons.person, "نام")),
+                  2.5, TextFiled(Icons.person, "نام",controllers[0])),
               SizedBox(height: 2.h,),
 
               FadeAnimation(
-                  3, TextFiled(Icons.family_restroom, "نام خانوادگی")),
+                  3, TextFiled(Icons.family_restroom, "نام خانوادگی",controllers[1])),
               SizedBox(height: 2.h,),
 
               FadeAnimation(
-                  3.5, TextFiled(Icons.person_pin_outlined, "نام کاربری")),
+                  3.5, TextFiled(Icons.person_pin_outlined, "نام کاربری",controllers[2])),
               SizedBox(height: 2.h,),
 
               FadeAnimation(
-                  4, TextFiled(Icons.email_outlined, "ایمیل")),
+                  4, TextFiled(Icons.email_outlined, "ایمیل",controllers[3])),
               SizedBox(height: 2.h,),
 
               FadeAnimation(
-                  4.5, PasswordTextFiled()),
+                  4.5, PasswordTextFiled(controllers[4])),
               SizedBox(height: 2.h,),
 
 

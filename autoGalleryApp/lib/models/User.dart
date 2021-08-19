@@ -1,6 +1,8 @@
 // models of user
 import 'dart:io';
 
+import 'package:flutter/cupertino.dart';
+
 class User{
 
   //id of user
@@ -21,6 +23,13 @@ class User{
   //passsword of user
   String _password;
 
+
+  //phone number of user
+  String phoneNumber="";
+
+  //national Code of user
+  String nationalCode="";
+
   //image of profile
   File _profile;
 
@@ -28,7 +37,7 @@ class User{
     ************************** constructor **************************
    */
   User(this._id, this._name, this._lastname, this._username, this._email,
-      this._password);
+      this._password, { this.phoneNumber,this.nationalCode});
 
 
   /*
@@ -45,6 +54,10 @@ class User{
   String get name => _name;
 
   File get profile => _profile;
+
+  String get phoneNumbers => phoneNumber;
+
+  String get nationalCodes => nationalCode;
 
   /*
     ************************** setter **************************
@@ -71,5 +84,13 @@ class User{
 
   set profile(File value) {
     _profile = value;
+  }
+
+  set phoneNumbers(String value) {
+    phoneNumber = value;
+  }
+
+  set nationalCodes(String value) {
+    nationalCode = value;
   }
 }

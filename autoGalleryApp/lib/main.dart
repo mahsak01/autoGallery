@@ -35,6 +35,8 @@ class App extends StatelessWidget {
         fontFamily: 'persion',
         backgroundColor: Colors.white,
         primaryColor: Colors.black,
+        buttonColor: Color(0xFFF8CE85),
+        splashColor: Colors.grey,
         accentColor: Color(0xFFFDAB1C),
         focusColor: Color(0xFFFDAB1C),
       ),

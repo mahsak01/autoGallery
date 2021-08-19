@@ -1,12 +1,26 @@
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
 
-import 'Car.dart';
 import 'PubilcValue.dart';
+import 'User.dart';
 
 /*
 ************************** ProviderChange **************************
  */
 class ProviderChange with ChangeNotifier {
+  /*
+    ************************** user profile  **************************
+   */
+  User _users=user;
+
+  User get users => _users;
+
+  void setProfile(File input) {
+    _users.profile=input;
+    notifyListeners();
+  }
+
 
   /*
     ************************** password **************************

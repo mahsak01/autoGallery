@@ -2,10 +2,18 @@
 import 'package:autogallery/screens/home.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
+/*
+************************** Button **************************
+ */
 class Button extends StatelessWidget {
+
+  //text of button
   String text;
 
 
+  /*
+  ************************** constructor **************************
+   */
   Button(this.text);
 
   @override
@@ -39,6 +47,11 @@ class Button extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
+
+
+                  /*
+                  ************************** set text of button **************************
+                   */
                   Padding(
                     padding: const EdgeInsets.only(top: 10, bottom: 10),
                     child: Text(

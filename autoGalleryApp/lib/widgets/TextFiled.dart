@@ -1,9 +1,21 @@
 import 'package:flutter/material.dart';
+
+/*
+************************** Text Field **************************
+ */
 class TextFiled extends StatelessWidget {
+
+  //icon of textfield
   IconData icon ;
+
+  //lable of textfield
   String lable;
 
-  TextFiled(this.icon, this.lable);
+  //controller of textfield
+  var controller;
+
+
+  TextFiled(this.icon, this.lable, this.controller);
 
   @override
   Widget build(BuildContext context) {
@@ -21,20 +33,22 @@ class TextFiled extends StatelessWidget {
                 child: Directionality(
                   textDirection: TextDirection.rtl,
                   child: TextFormField(
+                    style: TextStyle(fontFamily: 'English'),
+                    controller: controller,
                     textAlign: TextAlign.right,
                     autofocus: false,
                     decoration: InputDecoration(
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.all(Radius.circular(20)),
                             borderSide: BorderSide(
-                              color:Theme.of(context).primaryColor,
+                              color:(controller.text.isEmpty)?Theme.of(context).primaryColor:Theme.of(context).accentColor,
                               width: 2,
                             )
                         ),
                         enabledBorder: OutlineInputBorder( //Outline border type for TextFeild
                             borderRadius: BorderRadius.all(Radius.circular(20)),
                             borderSide: BorderSide(
-                              color:Theme.of(context).primaryColor,
+                              color:(controller.text.isEmpty)?Theme.of(context).primaryColor:Theme.of(context).accentColor,
                               width:2,
                             )
                         ),
@@ -53,7 +67,7 @@ class TextFiled extends StatelessWidget {
                         ),
                         labelStyle: TextStyle(
                             color: Theme.of(context).primaryColor,
-                            fontSize: 25,)),
+                            fontSize: 18,)),
                   ),
                 )),
           )

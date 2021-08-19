@@ -17,6 +17,7 @@ class SignIn extends StatefulWidget {
 }
 
 class _SignInState extends State<SignIn> {
+  List<TextEditingController> contoller = [TextEditingController(),TextEditingController()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -107,11 +108,11 @@ class _SignInState extends State<SignIn> {
                     **************************    TextField of this page **************************
                  */
                  */
-            FadeAnimation(2.5, TextFiled(Icons.person, "ایمیل/نام کاربری")),
+            FadeAnimation(2.5, TextFiled(Icons.person, "ایمیل/نام کاربری",contoller[0])),
             SizedBox(
               height: 2.h,
             ),
-            FadeAnimation(3, PasswordTextFiled()),
+            FadeAnimation(3, PasswordTextFiled(contoller[1])),
             SizedBox(
               height: 2.h,
             ),
