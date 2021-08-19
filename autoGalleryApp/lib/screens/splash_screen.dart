@@ -1,6 +1,8 @@
+import 'package:autogallery/models/ProviderChange.dart';
 import 'package:autogallery/screens/signIn.dart';
 import 'package:custom_fade_animation/custom_fade_animation.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/src/provider.dart';
 import 'package:sizer/sizer.dart';
 
 /*
@@ -12,6 +14,7 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

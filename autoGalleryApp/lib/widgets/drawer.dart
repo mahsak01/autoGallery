@@ -237,7 +237,6 @@ class DrawerWidgets extends StatelessWidget {
                 GestureDetector(
                   onTap: (){
                       Navigator.pop(context);
-                      context.watch<ProviderChange>().setSelectedIndex(4);
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => SplashScreen()),
