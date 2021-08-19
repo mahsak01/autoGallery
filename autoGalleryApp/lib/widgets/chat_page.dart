@@ -1,4 +1,5 @@
 import 'package:autogallery/presentations/my_flutter_app_icons.dart';
+import 'package:autogallery/screens/chat_page.dart';
 import 'package:autogallery/screens/edit_profile.dart';
 import 'package:autogallery/widgets/informationText.dart';
 import 'package:custom_fade_animation/custom_fade_animation.dart';
@@ -99,11 +100,10 @@ class ChatPageWidgets extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: (){
-                    Navigator.pop(context);
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(builder: (context) => ChatPage()),
-                    // );
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ChatPage()),
+                    );
                   },
                   child: Padding(
                     padding: const EdgeInsets.only(left: 40,top:40),
