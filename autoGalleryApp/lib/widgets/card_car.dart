@@ -1,6 +1,7 @@
 import 'package:autogallery/models/Car.dart';
 import 'package:autogallery/models/PubilcValue.dart';
 import 'package:autogallery/presentations/my_flutter_app_icons.dart';
+import 'package:autogallery/screens/car_page.dart';
 import 'package:favorite_button/favorite_button.dart';
 import 'package:flutter/material.dart';
 
@@ -38,17 +39,17 @@ class _CardCarState extends State<CardCar> {
           ************************** when tap ads **************************
          */
         onTap: (){
-          // Navigator.push(
-          //   context,
-          //   MaterialPageRoute(builder: (context) => CarPage()),
-          // );
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => CarPage(car)),
+          );
         },
         child: SizedBox(
           height: 250,
           width: 170,
           child: Card(
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-            color: Color(0xffffffff),
+            color: Theme.of(context).backgroundColor,
             elevation: 4,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.end,
@@ -98,7 +99,7 @@ class _CardCarState extends State<CardCar> {
                   child: Text(car.name,
                       textAlign: TextAlign.right,
                       style: TextStyle(
-                          color: Colors.black, fontSize: 21, fontFamily: 'persion')),
+                          color: Theme.of(context).primaryColor, fontSize: 21, fontFamily: 'persion')),
                 ),
 
                 /*
@@ -112,15 +113,15 @@ class _CardCarState extends State<CardCar> {
                       Text("میلیون",
                         textAlign: TextAlign.right,
                         style: TextStyle(
-                            color: Colors.black, fontSize: 18, fontFamily: 'persion')),
+                            color: Theme.of(context).primaryColor, fontSize: 18, fontFamily: 'persion')),
                       Text(car.price,
                           textAlign: TextAlign.right,
                           style: TextStyle(
-                              color: Colors.black, fontSize: 18, fontFamily: 'persion')),
+                              color: Theme.of(context).primaryColor, fontSize: 18, fontFamily: 'persion')),
 
                       Icon(
                           MyFlutterApp.money,
-                          color: Color(0xFFFDAB1C),
+                          color: Theme.of(context).accentColor,
                         size: 18,
 
                       ),
@@ -143,7 +144,7 @@ class _CardCarState extends State<CardCar> {
                         children: [
                           Icon(
                             Icons.circle,
-                            color: Colors.black,
+                            color: Theme.of(context).primaryColor,
                             size: 33,
                           ),
                           Icon(
@@ -164,16 +165,16 @@ class _CardCarState extends State<CardCar> {
                           Text("هزار کیلومتر",
                               textAlign: TextAlign.right,
                               style: TextStyle(
-                                  color: Colors.black, fontSize: 18, fontFamily: 'persion')),
+                                  color: Theme.of(context).primaryColor, fontSize: 18, fontFamily: 'persion')),
                           Text(car.km,
                               textAlign: TextAlign.right,
                               style: TextStyle(
-                                  color: Colors.black, fontSize: 18, fontFamily: 'persion')),
+                                  color:Theme.of(context).primaryColor, fontSize: 18, fontFamily: 'persion')),
 
                           Icon(
                               MyFlutterApp.road,
                               size: 18,
-                              color: Color(0xFFFDAB1C)
+                              color:Theme.of(context).accentColor
                           ),
                         ],
                       ),

@@ -1,9 +1,11 @@
+import 'package:autogallery/models/ProviderChange.dart';
 import 'package:autogallery/models/PubilcValue.dart';
 import 'package:autogallery/presentations/my_flutter_app_icons.dart';
 import 'package:autogallery/screens/allcar_page.dart';
 import 'package:autogallery/screens/search.dart';
 import 'package:autogallery/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/src/provider.dart';
 import 'package:sizer/sizer.dart';
 
 
@@ -235,6 +237,7 @@ class DrawerWidgets extends StatelessWidget {
                 GestureDetector(
                   onTap: (){
                       Navigator.pop(context);
+                      context.watch<ProviderChange>().setSelectedIndex(4);
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => SplashScreen()),
