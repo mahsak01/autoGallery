@@ -49,7 +49,7 @@ class _SearchState extends State<Search> {
               color: Theme.of(context).primaryColor, fontSize: 7.w),
         ),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios_rounded, color: Theme.of(context).primaryColor,  size: 10.w,),
+          icon: Icon(Icons.arrow_back_ios_rounded, color: Theme.of(context).primaryColor,  size: 40,),
           onPressed: (){
             Navigator.pop(context);
           },

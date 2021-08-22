@@ -75,7 +75,7 @@ class _CarPageState extends State<CarPage> {
             child: Icon(
               Icons.arrow_back_ios,
               color: Theme.of(context).primaryColor,
-              size: 10.w,
+              size: 40,
             ),
           ),
         ),

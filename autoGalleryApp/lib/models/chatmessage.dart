@@ -16,7 +16,7 @@ class ChatMessage{
    /*
     ************************** constructor **************************
    */
-   ChatMessage({this.image,this.Text, @required this.messageType, @required this.messageState, @required this.isSender});
+   ChatMessage({this.image,this.Text,  this.messageType,  this.messageState,  this.isSender});
 }
 
 

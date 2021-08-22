@@ -38,17 +38,17 @@ class ZoomImage extends StatelessWidget {
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         child:Center(
-          child:PinchZoomImage(
-            image:  Image.file(
-              image,
-              width: MediaQuery.of(context).size.width/1.1,
-              height: MediaQuery.of(context).size.height/1.5,
-              fit: BoxFit.cover,
+          child:Padding(
+            padding: const EdgeInsets.all(20),
+            child: PinchZoomImage(
+              image:  Image.file(
+                image,
+
+              ),
+              zoomedBackgroundColor: Colors.black,
+              hideStatusBarWhileZooming: true,
 
             ),
-            zoomedBackgroundColor: Color.fromRGBO(240, 240, 240, 1.0),
-            hideStatusBarWhileZooming: true,
-
           ),
         )
       ),

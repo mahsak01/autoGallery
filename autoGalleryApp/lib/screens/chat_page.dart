@@ -33,7 +33,7 @@ class _ChatPageState extends State<ChatPage> {
           icon: Icon(
             Icons.arrow_back_ios_rounded,
             color: Theme.of(context).primaryColor,
-            size: 10.w,
+            size: 40,
           ),
         ),
         actions: [

@@ -99,7 +99,7 @@ class _DropDownSearchPageState extends State<DropDownSearchPage> {
           icon: Icon(
             Icons.arrow_back_ios_rounded,
             color: Theme.of(context).primaryColor,
-            size: 10.w,
+            size: 40.w,
           ),
           onPressed: () {
             Navigator.pop(context);

@@ -40,12 +40,12 @@ User user=  User(0,"مهسا","کریمی","mahsak01","mah8069sa@yahoo.com","123
   ************************** Car list **************************
  */
 List <Car> cars=[
-  Car(0,"تیبا صندق دار",["assets/images/post/1_1.jpg","assets/images/post/1_2.jpg","assets/images/post/1_3.jpg"],"0xFF404040","90","98"),
-  Car(1,"تیبا صندق دار",["assets/images/post/1_1.jpg","assets/images/post/1_2.jpg","assets/images/post/1_3.jpg"],"0xFF404040","90","98"),
-  Car(2,"تیبا صندق دار",["assets/images/post/1_1.jpg","assets/images/post/1_2.jpg","assets/images/post/1_3.jpg"],"0xFF404040","90","98"),
-  Car(3,"تیبا صندق دار",["assets/images/post/1_1.jpg","assets/images/post/1_2.jpg","assets/images/post/1_3.jpg"],"0xFF404040","90","98"),
-  Car(4,"تیبا صندق دار",["assets/images/post/1_1.jpg","assets/images/post/1_2.jpg","assets/images/post/1_3.jpg"],"0xFF404040","90","98"),
-  Car(5,"تیبا صندق دار",["assets/images/post/1_1.jpg","assets/images/post/1_2.jpg","assets/images/post/1_3.jpg"],"0xFF404040","90","98"),
+  Car(0,"تیبا صندوق دار",["assets/images/post/1_1.jpg","assets/images/post/1_2.jpg","assets/images/post/1_3.jpg"],"0xFF404040","90","98"),
+  Car(1,"تیبا صندوق دار",["assets/images/post/1_1.jpg","assets/images/post/1_2.jpg","assets/images/post/1_3.jpg"],"0xFF404040","90","98"),
+  Car(2,"تیبا صندوق دار",["assets/images/post/1_1.jpg","assets/images/post/1_2.jpg","assets/images/post/1_3.jpg"],"0xFF404040","90","98"),
+  Car(3,"تیبا صندوق دار",["assets/images/post/1_1.jpg","assets/images/post/1_2.jpg","assets/images/post/1_3.jpg"],"0xFF404040","90","98"),
+  Car(4,"تیبا صندوق دار",["assets/images/post/1_1.jpg","assets/images/post/1_2.jpg","assets/images/post/1_3.jpg"],"0xFF404040","90","98"),
+  Car(5,"تیبا صندوق دار",["assets/images/post/1_1.jpg","assets/images/post/1_2.jpg","assets/images/post/1_3.jpg"],"0xFF404040","90","98"),
 ];
 
 
@@ -75,7 +75,8 @@ List<String> chassis = [
   "وانت",
   "ون",
   "کوپه",
-  "موارد دیگر"
+  "موارد دیگر",
+  "وسدان"
 ];
 List<String> colors = [
   "سفید",
@@ -89,7 +90,7 @@ List<String> colors = [
 ];
 
 
-List<String>  GearBox = ["دنده ای", "اتوماتیک"];
+List<String>  GearBox = ["دستی", "اتوماتیک"];
 
-List<String> Fuel = ["بنزین", "گازوئیل", "دوگانه سوز", "هیبریدی"];
+List<String> Fuel = ["بنزین", "گازوئیل", "دوگانه سوز", "هیبرید"];
 
