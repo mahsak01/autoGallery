@@ -30,8 +30,8 @@ class BrandWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 10, top:10,bottom: 10,right: 10),
       child: Container(
-        height: 12.h,
-        width: 25.w,
+        height: 80,
+        width: 100,
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius:  BorderRadius.all(Radius.circular(30)),
@@ -50,8 +50,8 @@ class BrandWidget extends StatelessWidget {
         child:  Padding(
           padding: const EdgeInsets.all(10),
           child: Image(
-              width: 10.h,
-              height: 10.h,
+              width: 100,
+              height: 80,
               image: Svg(url)
           ),
         ),

@@ -124,10 +124,6 @@ class EditProfileState extends State<EditProfile> {
                   IconButton(
                     onPressed: (){
                       Navigator.pop(context);
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => HomePage()),
-                      );
                     },
                     icon: Icon(
                       Icons.arrow_back_ios,

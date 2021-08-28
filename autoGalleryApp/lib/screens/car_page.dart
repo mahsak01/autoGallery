@@ -64,11 +64,6 @@ class _CarPageState extends State<CarPage> {
         leading:GestureDetector(
           onTap: (){
             Navigator.pop(context);
-            Navigator.pop(context);
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => HomePage()),
-            );
           },
           child: Padding(
             padding: const EdgeInsets.only(left: 20,top: 5),

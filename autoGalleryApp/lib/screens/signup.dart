@@ -112,6 +112,8 @@ class _SignUpState extends State<SignUp> {
               SizedBox(height: 2.h,),
 
 
+
+
               /*
               /*
                   **************************    TextField of this page **************************
